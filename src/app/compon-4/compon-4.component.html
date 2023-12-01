@@ -1,0 +1,119 @@
+<h1>Gestionar Productos</h1>
+<div class="card">
+    <div class="card-body">
+            <div class="content">
+                <h1 class="logo">Registar / <span> Editar</span></h1>
+                <div class="contact-wrapper animated bounceInUp">
+                    <div class="contact-form">
+                        <h3></h3>
+                        <form>
+                            <p>
+                                <label>Título</label>
+                                <input type="text" formControlName="titulo">
+                            </p>
+                            <p>
+                                <label>Fecha de Lanzamiento</label>
+                                <input type="date" formControlName="fechalan">
+                            </p>
+                            <p>
+                                <label>Idioma</label>
+                                <input type="text" formControlName="idioma">
+                            </p>
+                            <p>
+                                <label>Páginas</label>
+                                <input type="number" formControlName="paginas">
+                            </p>
+                            <p class="block">
+                               <label>Descripción</label> 
+                                <textarea name="message" rows="3" formControlName="descripcion"></textarea>
+                            </p>
+                            <p>
+                                <label>Portada</label>
+                                <input type="text" formControlName="portada">
+                            </p>
+                            <p>
+                                <label>Autor</label>
+                                <select formControlName="autor">
+                                    <option selected>Selecciona un Autor</option>
+                                    <option></option>
+                                </select>
+                            </p>
+                            <p>
+                                <label>Categoría</label>
+                                <select formControlName="categoria" >
+                                    <option selected>Selecciona una Categoría</option>
+                                    <option></option>
+                                </select>
+                            </p>
+                            <p>
+                                <label>Editorial</label>
+                                <select formControlName="editorial" class="form-select">
+                                    <option selected>Selecciona una Editorial</option>
+                                    <option></option>
+                                </select>
+                            </p>
+                            <p class="block">
+                                <button type="submit">
+                                    Guardar
+                                </button>
+                            </p>
+                        </form>
+                    </div>
+
+
+                    <div class="contact-info">
+                        <h4>Más Información</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> SGE Piero</li>
+                            <br>
+                            <li><i class="fas fa-phone"></i> (111) 111 111 111</li>
+                            <br>
+                            <li><i class="fas fa-envelope-open-text"></i> Contacto</li>
+                            <br>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero provident ipsam necessitatibus repellendus?</p>
+                        <p>Company.com</p>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+</div>
+
+<!-- TABLA -->
+<div class="tabla">
+    <h2>Listar / <span> Libros</span></h2>
+    <table class="table table-hover">
+        <thead class="table-light">
+            <tr>
+                <th>ID</th>
+                <th>TÍTULO</th>
+                <th>FECHA DE LANZAMIENTO</th>
+                <th>IDIOMA</th>
+                <th>PÁG</th>
+                <th>DESCRIPCIÓN</th>
+                <th>AUTOR</th>
+                <th>CATEGORÍA</th>
+                <th>EDITORIAL</th>
+                <th>OPCIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr >
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="opciones">
+                    <button type="button" class="btn btn-secondary"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                </td>
+            </tr>
+        </tbody>
+      </table>
+</div>

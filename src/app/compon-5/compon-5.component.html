@@ -1,0 +1,99 @@
+<h1>Gestionar Reservas</h1>
+<div class="card">
+    <div class="card-body">
+            <div class="content">
+                <h1 class="logo">Registar / <span> Editar</span></h1>
+                <div class="contact-wrapper animated bounceInUp">
+                    <div class="contact-form">
+                        <h3></h3>
+                        <form [formGroup]="reservasForm" (ngSubmit)="guardar()">
+                            <p>
+                                <label>Reserva</label>
+                                <input type="text" formControlName="reserva">
+                            </p>
+                            <p>
+                                <label>Vuelo</label>
+                                <select formControlName="vuelo">
+                                    <option selected></option>
+                                    <option [ngValue]="vuelo" *ngFor="let vuelo of vuelos">{{vuelo.fechasa}}</option>
+                                </select>
+                            </p>
+                            <p>
+                                <label>Cliente</label>
+                                <select formControlName="cliente" >
+                                    <option selected >Selecciona un Cliente</option>
+                                    <option [ngValue]="cliente" *ngFor="let cliente of clientes">{{cliente.nombres}}</option>
+                                </select>
+                            </p>
+                            <p>
+                                <label>Hotel</label>
+                                <select formControlName="hotel" class="form-select">
+                                    <option selected [ngValue]="hotel" *ngFor="let hotel of hoteles">{{hotel.nombre}}</option>
+                                    <option></option>
+                                </select>
+                            </p>
+                            <p>
+                                <label>Sucursal</label>
+                                <select formControlName="sucursal" class="form-select">
+                                    <option selected>Selecciona una Sucursal</option>
+                                    <option [ngValue]="sucursal" *ngFor="let sucursal of sucursales">{{sucursal.localidad}}</option>
+                                </select>
+                            </p>
+                            <p class="block">
+                                <button type="submit" [disabled]="reservasForm.invalid">
+                                    Guardar
+                                </button>
+                            </p>
+                        </form>
+                    </div>
+
+
+                    <div class="contact-info">
+                        <h4>Más Información</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> SGE Piero</li>
+                            <br>
+                            <li><i class="fas fa-phone"></i> (111) 111 111 111</li>
+                            <br>
+                            <li><i class="fas fa-envelope-open-text"></i> Contacto</li>
+                            <br>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero provident ipsam necessitatibus repellendus?</p>
+                        <p>Company.com</p>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+</div>
+
+<!-- TABLA -->
+<div class="tabla">
+    <h2>Listar / <span> Reservas</span></h2>
+    <table class="table table-hover">
+        <thead class="table-light">
+            <tr>
+                <th>ID</th>
+                <th>CLASE</th>
+                <th>FECHA DE LANZAMIENTO</th>
+                <th>IDIOMA</th>
+                <th>PÁG</th>
+                <th>DESCRIPCIÓN</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let reserva of reservas">
+                <td>{{reserva.id}}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="opciones">
+                    <button type="button" class="btn btn-secondary" (click)="editar(reserva)"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button type="button" class="btn btn-danger" (click)="eliminar(reserva)"><i class="fa-solid fa-trash-can"></i></button>
+                </td>
+            </tr>
+        </tbody>
+      </table>
+</div>
